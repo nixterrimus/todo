@@ -2,7 +2,7 @@
 
 ![](http://dl.dropbox.com/u/59591/todo_dog.jpg)
 
-todo.rb is a dead simple command line todo list manager written in Ruby.  It was originally written by [Nick Rowe](http://dcxn.com) in 2011.
+todo.rb is a dead simple command line todo list manager written in Ruby.  It was originally written by [Nick Rowe](http://dcxn.com) in 2011 and was inspired by the [CodeBrawl todo Challenge](http://codebrawl.com/contests/command-line-todo-lists/).
 
 ## Making it Go - A Simple Tutorial
 todo.rb is simple, first lets add some items to our list
