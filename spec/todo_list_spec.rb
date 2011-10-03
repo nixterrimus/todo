@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe "todo_list" do
   
+  before(:each) do
+    
+  end
+  
   describe "#initialize" do
     context "when no todo.txt file exists" do
       it "should create an empty list of todos" do

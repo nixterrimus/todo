@@ -41,6 +41,14 @@ Managing multiple lists is simple, too.  To manage a list specify the location w
     ./todo.rb -f work.txt Click the keys on the keyboard
     ./todo.rb -f dog.txt buy a new squeaky toy
 
+## Downloading and install
+Three steps:
+
+- `git clone git@github.com:nixterrimus/todo.git`
+- `rake build`
+- `rake install`
+
+There, it's installed!
 
 ## Why does this Rock?
 It's easy- it's easy to use and it's easy to modify.  It's also portable.  You can pickup your todo file and move it at any time.  Want to add todo's when you're away from the command line?  That's no big deal- keep the file in dropbox and you can edit it on your phone, tablet, or anywhere else you can edit a text file.
@@ -51,6 +59,9 @@ On the code front- it's well organized Ruby with rdoc style comments.
 Personally, I use a todo.txt file on my desktop.  I like that it's lightweight.  On a mac you can use Quicklook to get a quick view of what's inside a file.  To do this, click on the todo.txt file and then hit the space bar.
 
 I've also created an [Alfred](http://www.alfredapp.com/) action for [appending to the todo.txt file](http://bit.ly/r66UMQ).  This action can be added by downloading the file and dragging it into extension pane.  From there you can use `todo` followed by the task.  For example `todo clean the fish tank`.
+
+## Contributing
+Follow the directions to install the gem.  Then add features and test them using rspec.  To see if your features pass run `rake spec`.
 
 ## Who took that Dog Photo?
 The dog picture was taken by [Randy Son Of Robert on Flickr](http://www.flickr.com/photos/randysonofrobert/2639402501/) and is used under a creative commons 2.0 CC by attribution license.
