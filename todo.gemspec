@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Nick Rowe"]
   s.email       = ["nixterrimus@dcxn.com"]
-  s.homepage    = "dcxn.com"
+  s.homepage    = "http://dcxn.com"
   s.summary     = %q{A simple command line todo manager}
   s.description = %q{todo.rb is a simple command line manager for a todo.txt file}
 
