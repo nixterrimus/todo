@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+todo_dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+$LOAD_PATH.unshift(todo_dir) unless $LOAD_PATH.include?(todo_dir)
+require 'optparse'
+require 'todo'
+
+options = {:file => "todo.txt"}
+
+OptionParser.new do |opts|
+  opts.on("-f", "--file F", String, "Use a custom todo file") do |f|
+    options[:file] = f
+  end
+end.parse!
+
+todo_list = Todo::TodoList.new(options[:file])
+
+if ARGV.count == 0
+  puts todo_list
+else
+  if ARGV[0].downcase == "done"   
+    todo = todo_list.todo_at_index(ARGV[1])
+    if todo.nil?
+      puts "Couldn't find todo at location #{ARGV[1]}"
+    else
+      todo_list.remove(todo)
+    end
+  else
+    todo = Todo::TodoItem.new(ARGV.join(" "))
+    todo_list.append(todo)
+  end
+end
+
