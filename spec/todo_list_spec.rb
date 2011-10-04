@@ -9,7 +9,7 @@ describe "todo_list" do
   describe "#initialize" do
     context "when no todo.txt file exists" do
       it "should create an empty list of todos" do
-        list = Todo::TodoList.new("todo.txt")
+        list = Todo::TodoList.new("rar.txt")
         list.todo_list.should be_empty
       end
     end
@@ -23,7 +23,10 @@ describe "todo_list" do
   
   describe "#append" do
     it "should set the line number to the next largest number" do
-      flunk
+      list = Todo::TodoList.new("todo.txt")
+      todo = Todo::TodoItem.new("walk the dog")
+      list.append(todo)
+      list.todo_list.first.line_number == 1
     end
     
     it "should add the todo from the argument to the todo_list" do
