@@ -3,20 +3,28 @@ require 'spec_helper'
 describe "todo_list" do
   
   before(:each) do
-    
+    @empty = Todo::TodoList.new("../fixtures/todo-blank.txt")
+    @three = Todo::TodoList.new("../fixtures/todo-three.txt")   
   end
   
   describe "#initialize" do
+    it "should accept a path to a todo file" do
+      flunk
+    end
+    
+    it "should accept the name of a file" do
+      flunk
+    end
+    
     context "when no todo.txt file exists" do
       it "should create an empty list of todos" do
-        list = Todo::TodoList.new("rar.txt")
-        list.todo_list.should be_empty
+        @empty.todo_list.should be_empty
       end
     end
     
     context "when a todo.txt file exists" do
       it "should populate the todo_list from the file" do
-        flunk
+        @three.todo_list.count.should == 3
       end
     end
   end
